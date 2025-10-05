@@ -29,7 +29,7 @@ public class ClosestPair {
         }
 
         int mid = n / 2;
-        final Point2D.Double midPoint = Px[mid]; // <--- make it final
+        final Point2D.Double midPoint = Px[mid]; 
 
         Point2D.Double[] Pyl = Arrays.stream(Py)
                 .filter(p -> p.x <= midPoint.x)
@@ -43,7 +43,7 @@ public class ClosestPair {
         double dr = closest(Arrays.copyOfRange(Px, mid, n), Pyr, m);
         double d = Math.min(dl, dr);
 
-        final double finalD = d; // also final for lambda
+        final double finalD = d;
         Point2D.Double[] strip = Arrays.stream(Py)
                 .filter(p -> Math.abs(p.x - midPoint.x) < finalD)
                 .toArray(Point2D.Double[]::new);
