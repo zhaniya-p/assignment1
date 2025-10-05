@@ -10,7 +10,7 @@ class DeterministicSelectTest {
     @Test
     void testSmallArray() {
         int[] arr = {7, 2, 9, 4, 3};
-        int kth = DeterministicSelect.select(arr.clone(), 2); // 2-й по порядку
+        int kth = DeterministicSelect.select(arr.clone(), 2);
         assertEquals(3, kth);
     }
 
