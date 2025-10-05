@@ -18,7 +18,7 @@ class ClosestPairTest {
     void testSmallSet() {
         double[][] points = {{0,0}, {1,1}, {2,2}, {1,2}};
         double d = ClosestPair.closestPair(points);
-        assertTrue(d <= Math.sqrt(2)); // минимальное расстояние ≤ √2
+        assertTrue(d <= Math.sqrt(2));
     }
 
     @Test
@@ -30,6 +30,6 @@ class ClosestPairTest {
             points[i][1] = rand.nextDouble();
         }
         double d = ClosestPair.closestPair(points);
-        assertTrue(d >= 0); // всегда неотрицательное
+        assertTrue(d >= 0); 
     }
 }
